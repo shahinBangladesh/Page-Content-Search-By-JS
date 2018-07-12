@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container" style="margin-top: 50px;">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group"> 
+					<label>Enter Keyword : </label>
+					<input type="text" id="searchItem" class="form-control" placeholder="Enter Keyword." autofocus> 
+				</div> 
+			</div>
+		</div>
+		<div class="row" id="graphic_board">
+			<div class="col-md-12">
+				<h3 class="text-center">Page Content Here</h3>
+				<hr>
+			</div>
+		   <div class="col-md-2 item">
+		      <p>lorem</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p><i>ipsum</i></p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>lorem</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>lorem</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>ipsum</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>Dolor</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>lorem</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p><i>ipsum</i></p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>lorem</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>lorem</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>ipsum</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>Dolor</p>
+		   </div>
+
+		   <div class="col-md-2 item">
+		      <p>set</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p><i>set</i></p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>set</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>amet</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>amet</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>amet</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>lorem</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p><i>ipsum</i></p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>lorem</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>lorem</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>ipsum</p>
+		   </div>
+		   <div class="col-md-2 item">
+		      <p>Dolor</p>
+		   </div>
+		</div>
+	</div>
+	<script> 
+		$(document).ready(function(){
+			$('#searchItem').keyup(function(){
+	            var name = $(this).val();
+	            var pattern = name.toLowerCase(); 
+	            var targetId = ""; 
+	            var divs = document.getElementsByClassName("item"); 
+
+	            $(document).find('.item').hide();
+
+	            $('.item').each(function(i){
+	                var para = divs[i].getElementsByTagName("p"); 
+	                var index = para[0].innerText.toLowerCase().indexOf(pattern); 
+	                if (index != -1) { 
+	                    $(this).show();
+	                }
+	            });
+	        }); 
+		});
+	</script>
+</body>
+</html>
